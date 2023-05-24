@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="WpfApp1.View.CalculatorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1.View"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="850">
+    <Grid>
+        <StackPanel >
+
+            <TextBox x:Name="Input_Txt"  Margin="0 20 0 0" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Text="{Binding Input}"  Height="150" Width="600" FontSize="35" BorderThickness="3" BorderBrush="#12B76A" IsReadOnly="True"/>
+            <TextBlock></TextBlock>
+            <TextBox x:Name="Result_Txt" Text="{Binding Result}"  Height="50" Width="600" FontSize="35" BorderThickness="3" BorderBrush="#12B76A" IsReadOnly="True"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <StackPanel HorizontalAlignment="Left" >
+                    <Button Command="{Binding btn7}" Content="7" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn4}" Content="4" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn1}" Content="1" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btndot}" Content="." Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" >
+                    <Button Command="{Binding btn8}" Content="8" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn5}" Content="5" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn2}" Content="2" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn0}" Content="0" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" >
+                    <Button Command="{Binding btn9}" Content="9" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn6}" Content="6" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn3}" Content="3" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn_eq}" Content="=" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" >
+                    <Button Command="{Binding btn_sum}" Content="+" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn_sub}" Content="-" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn_mul}" Content="x" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn_div}" Content="/" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" >
+                    <Button Command="{Binding btn_cl}" Content="C" Style="{StaticResource ResourceKey=CalculatorButton}"/>
+                    <Button Command="{Binding btn_rm}"  Style="{StaticResource ResourceKey=CalculatorButton}">
+                        <Icon:PackIconMaterial Kind="Backspace" Width="30" Height="30" />
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
